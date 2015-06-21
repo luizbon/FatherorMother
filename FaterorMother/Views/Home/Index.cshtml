@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "mulitipart/form-data" }))
+{
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="fileinput fileinput-new thumbnail" data-provides="fileinput">
+                <div class="fileinput-preview" data-trigger="fileinput"></div>
+                <div class="caption">
+                    <h3>Choose Father image:</h3>
+                    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="father"></span>
+                    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                    <p class="help-block">Use an image with just the father's face.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="fileinput fileinput-new thumbnail" data-provides="fileinput">
+                <div class="fileinput-preview" data-trigger="fileinput"></div>
+                <div class="caption">
+                    <h3>Choose Mother image:</h3>
+                    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="mother"></span>
+                    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                    <p class="help-block">Use an image with just the mother's face.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="fileinput fileinput-new thumbnail" data-provides="fileinput">
+                <div class="fileinput-preview" data-trigger="fileinput"></div>
+                <div class="caption">
+                    <h3>Choose Child image:</h3>
+                    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="child"></span>
+                    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                    <p class="help-block">Use an image with just the child's face.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button type="submit" class="btn btn-default pull-right">Submit</button>
+}
